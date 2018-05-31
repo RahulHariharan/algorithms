@@ -17,6 +17,15 @@ class linkedlist:
             currentNode = currentNode.nextNode
         currentNode.nextNode = newNode
 
+    def remove(self):
+        currentNode = self.head
+        previousNode = None
+        while currentNode.nextNode != None:
+            previousNode = currentNode
+            currentNode = currentNode.nextNode
+        previousNode.nextNode = None
+        currentNode = None
+
     def print(self):
         currentNode = self.head
         while currentNode.nextNode != None:
@@ -24,10 +33,16 @@ class linkedlist:
             currentNode = currentNode.nextNode
 
 
+
+
 linkedlist = linkedlist()
 
 linkedlist.addNode(10)
 linkedlist.addNode(25)
 linkedlist.addNode(30)
+
+linkedlist.print()
+
+linkedlist.remove()
 
 linkedlist.print()
